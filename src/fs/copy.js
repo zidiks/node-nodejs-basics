@@ -11,7 +11,7 @@ export const copy = () => {
         checkPathExists(toPath),
     ]).then((res) => {
         if (!res[0] || res[1]) {
-            throw 'FS operation failed';
+            throw new Error('FS operation failed');
         } else {
             copyFolderRec(fromPath, toPath);
         }

@@ -10,7 +10,7 @@ export const list = () => {
                 fileNames.forEach((name) => console.log(name));
             })
         } else {
-            throw 'FS operation failed';
+            throw new Error('FS operation failed');
         }
     });
 };

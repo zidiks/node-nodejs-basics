@@ -11,7 +11,7 @@ export const calculateHash = () => {
                 return hash(content);
             });
         } else {
-            throw 'FS operation failed';
+            throw new Error('FS operation failed');
         }
     });
 };

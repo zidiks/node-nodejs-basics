@@ -15,7 +15,7 @@ export const rename = () => {
         checkPathExists(newFile),
     ]).then((res) => {
         if (!res[0] || res[1]) {
-            throw 'FS operation failed';
+            throw new Error('FS operation failed');
         } else {
             fs.rename(file, newFile);
         }

@@ -8,7 +8,7 @@ export const remove = () => {
         if (exists) {
             fs.unlink(filePath);
         } else {
-            throw 'FS operation failed';
+            throw new Error('FS operation failed');
         }
     });
 };

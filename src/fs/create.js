@@ -6,7 +6,7 @@ const path = './files/fresh.txt';
 export const create = () => {
     checkPathExists(path).then((exists) => {
         if (exists) {
-            throw 'FS operation failed';
+            throw new Error('FS operation failed');
         } else {
             fs.writeFile(path, 'I am fresh and young')
         }

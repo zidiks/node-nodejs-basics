@@ -8,7 +8,7 @@ export const read = async () => {
         if (exists) {
             fs.readFile(filePath, { encoding: 'utf8' }).then((content) => console.log(content));
         } else {
-            throw 'FS operation failed';
+            throw new Error('FS operation failed');
         }
     });
 };
