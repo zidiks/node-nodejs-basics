@@ -1,3 +1,11 @@
 export const parseEnv = () => {
-    // Write your code here 
+    const response = [];
+    Object.keys(process.env).forEach((key) => {
+        if (key.includes('RSS_')) {
+            response.push(`${key}=${process.env[key]}`);
+        }
+    });
+    console.log(response.join('; '));
 };
+
+parseEnv();
